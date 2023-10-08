@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">TestTask</string>
+    <string name="rules1">In a quiet village, where only birds and the wind dreamed, a night came full of stars and mysteries. Only one warrior stood guard - the hero of this incredible fairy tale. Suddenly, a terrible monster emerged from the dark thickets of the forest, covering the village houses with darkness with its dark cloak. The rest of the local residents were hiding in shelters, only a daredevil stood in his way. Protect your village!</string>
+    <string name="rules2">You have the right to start fighting the dark monster, but remember that only the sharp blade of your sword will pass through its armor. The monster will not stand aside and will definitely try to answer you, don’t skimp on armor! Keep in mind that you can only regenerate four times, each time restoring 30% of your maximum health, but giving up the ability to strike that turn. May your valor accompany you on this exciting adventure!</string>
+    <string name="hintForAttack">This is your characters attack. Enter a number from 1 to 30</string>
+    <string name="hintForDefense">This is your characters defense. Enter a number from 1 to 30</string>
+    <string name="hintForHealth">This is your characters health. Enter a number from 1 to 2147483647</string>
+    <string name="hintForMinDamage">This is your characters minimum damage. Enter a number from 1 to 2147483647</string>
+    <string name="hintForMaxDamage">This is your characters maximum damage. The maximum damage must be greater than the minimum.Enter a number from 1 to 2147483647</string>
+    <string name="playerIsDied">The terrible monsters, having defeated the great warrior, devoured the village, leaving only traces of destruction and darkness. Bitter loss deprived the inhabitants of their home, and the evening wind carried only the echo of their silent legends</string>
+    <string name="monsterIsDied">With the splendor of magic and the power of valor, the warrior overcame the monster, freeing the village from darkness. Light returns to every corner, and in the hearts of the inhabitants the hero becomes an eternal symbol of strength and courage</string>
+    <string name="player_attacking_success">Success! You have dealt %1$d damage to your opponent</string>
+    <string name="player_attacking_failure">No luck! The opponents armor resisted your blow</string>
+    <string name="monster_attacking_success">No luck! The monster dealt %1$d damage to you</string>
+    <string name="monster_attacking_failure">Success! You repelled the monsters attack</string>
+    <string name="player_healing">You restored your HP to %1$d</string>
+</resources>
