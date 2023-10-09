@@ -23,14 +23,16 @@ open class Creature(
         fun isValidAttack(value: Int): Boolean = value in MIN_ATTACK..MAX_ATTACK
         fun isValidHealth(value: Int): Boolean = value in MIN_HEALTH..MAX_HEALTH
         fun isValidDamage(value: IntRange): Boolean =
-            value.first in MIN_DAMAGE..MAX_DAMAGE && value.last in MIN_DAMAGE..MAX_DAMAGE && value.last > value.first
+            value.first in MIN_DAMAGE until MAX_DAMAGE && value.last in MIN_DAMAGE + 1..MAX_DAMAGE && value.last > value.first
     }
+
     init { //for testing model, app never crash
         require(isValidAttack(attack))
         require(isValidDefense(defense))
         require(isValidHealth(health))
         require(isValidDamage(damageRange))
     }
+
     protected var _health = mutableIntStateOf(health)
 
     val health: State<Int>
@@ -48,7 +50,7 @@ open class Creature(
         return false
     }
 
-    private fun takingDamage (dmg: Int) {
+    private fun takingDamage(dmg: Int) {
         _health.intValue -= dmg
     }
 

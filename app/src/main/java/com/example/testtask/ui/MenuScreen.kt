@@ -25,7 +25,7 @@ fun MenuScreen(navController: NavHostController) {
             .background(color = colorResource(id = R.color.beige))
             .fillMaxSize()
     ) {
-        CreateText("Let's the battle begin!", 200,35, Color.White)
+        CreateText("Let's the battle begin!", 200, 35, Color.White)
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
             modifier = Modifier

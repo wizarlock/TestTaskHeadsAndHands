@@ -1,6 +1,6 @@
 package com.example.testtask.model
 
-class Monster (
+class Monster(
     attack: Int,
     defense: Int,
     health: Int,

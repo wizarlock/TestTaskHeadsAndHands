@@ -93,7 +93,6 @@ fun PreStartScreen(navController: NavHostController, mViewModel: MainViewModel) 
             ) {
                 CreateButton("Let's Fight!", 30, 275) {
                     mViewModel.createPlayer(attack, defense, health, IntRange(minDamage, maxDamage))
-                    mViewModel.createMonster()
                     navController.navigate("Game")
                 }
             } else CreateText("Enter correct characteristics", 20, 20, Color.Red)

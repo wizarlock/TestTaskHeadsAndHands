@@ -37,6 +37,7 @@ class MainViewModel : ViewModel() {
 
     fun createPlayer(attack: Int, defense: Int, health: Int, damageRange: IntRange) {
         mPlayer = Player(attack, defense, health, damageRange)
+        createMonster()
     }
 
     fun getPlayerAttack(): Int = mPlayer.attack
@@ -49,7 +50,7 @@ class MainViewModel : ViewModel() {
             damage
         ))
 
-    fun createMonster() {
+    private fun createMonster() {
         val monsterAttack = calculateMonsterCharacteristic(mPlayer.attack, 30)
         val monsterDefense = calculateMonsterCharacteristic(mPlayer.defense, 30)
         val monsterHealth = calculateMonsterCharacteristic(mPlayer.health.value, Int.MAX_VALUE)
