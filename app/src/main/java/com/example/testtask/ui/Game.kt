@@ -354,7 +354,7 @@ private fun showActionsResult(context: Context, value: Int, action: EnumActions)
 private fun gameIsEnd(context: Context, action: EnumActions, navController: NavHostController) {
     val text: String = when (action) {
         EnumActions.PLAYER_IS_DIED -> context.getString(R.string.playerIsDied)
-        EnumActions.MONSTER_DIED -> context.getString(R.string.playerIsDied)
+        EnumActions.MONSTER_DIED -> context.getString(R.string.monsterIsDied)
         else -> {
             ""
         }
