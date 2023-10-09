@@ -145,5 +145,9 @@ class ModelTest {
         while (pl2.health.value == 100) damage = att2.performAttack(pl2)
         pl2.regenHealth()
         assertEquals(100 - damage + 30, pl2.health.value)
+        var damage2 = 0
+        while (pl2.health.value == 100 - damage + 30) damage2 = att2.performAttack(pl2)
+        pl2.regenHealth()
+        assertEquals(100 - damage + 30 - damage2 + 30, pl2.health.value)
     }
 }
