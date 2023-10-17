@@ -36,10 +36,8 @@ import androidx.lifecycle.viewModelScope
 import androidx.navigation.NavHostController
 import com.example.testtask.R
 import com.example.testtask.vm.MainViewModel
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import kotlin.random.Random
 
 @Composable
@@ -314,17 +312,16 @@ private fun monsterTurn(
     mViewModel.viewModelScope.launch {
         setEnabled(false)
         delay(3000)
-        withContext(Dispatchers.Main) {
-            val damageTaken = mViewModel.protectFromMonster()
-            showActionsResult(context, damageTaken, EnumActions.MONSTER_ATTACKING)
-            delay(3000)
-            setEnabled(true)
-            if (mViewModel.isPlayerDied()) gameIsEnd(
-                context,
-                EnumActions.PLAYER_IS_DIED,
-                navController
-            )
-        }
+        val damageTaken = mViewModel.protectFromMonster()
+        showActionsResult(context, damageTaken, EnumActions.MONSTER_ATTACKING)
+        delay(3000)
+        setEnabled(true)
+        if (mViewModel.isPlayerDied()) gameIsEnd(
+            context,
+            EnumActions.PLAYER_IS_DIED,
+            navController
+        )
+
     }
 }
 
